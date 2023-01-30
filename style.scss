@@ -2,6 +2,14 @@ html {
     font-size: 16px;
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
 * {
     box-sizing: border-box;
 }
@@ -39,7 +47,8 @@ body,
         justify-content: center;
         background-color: #fff;
         height: 45px;
-        border-bottom: 1px solid #eee;
+        // border-bottom: 1px solid #eee;
+        box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.140);
 
         .container {
             display: flex;
@@ -85,11 +94,11 @@ body,
             margin-left: auto;
 
             button {
-                background-color: rgb(60, 0, 255);
-                color: #fff;
-                border: 0;
+                background-color: rgba(60, 0, 255, 0);
+                color: rgb(0, 0, 0);
+                border: 1px solid #000;
                 font-size: 13px;
-                padding: 5px 15px;
+                padding: 2px 9px;
                 -webkit-border-radius: 2px;
                 -moz-border-radius: 2px;
                 -ms-border-radius: 2px;
@@ -99,6 +108,8 @@ body,
 
                 &:hover {
                     background-color: rgb(8, 0, 235);
+                    color: #fff;
+                    border-color: rgb(8, 0, 235);
                 }
 
             }
@@ -120,36 +131,35 @@ body,
 
                 text-transform: capitalize;
 
-
                 &.nav-item a.navlink {
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
                     padding: 0 0;
                     height: 45px;
-
-
-
                 }
 
-                & .has-dropdown:hover+ul.dropdown {
-                    display: block;
-                }
 
-                & .has-dropdown:focus+ul.dropdown {
+
+                & .has-dropdown:focus+.dropdown,
+                &:focus-within ul,
+                & .has-dropdown:hover+.dropdown {
                     display: block;
                 }
 
                 .dropdown {
                     position: absolute;
-                    width: 76px;
+                    min-width: 70px;
                     display: none;
                     background-color: rgb(255, 255, 255);
-                    border: 1px solid #eee;
+                    // border: 1px solid #eee;
                     list-style: none;
                     padding: 0;
+                    box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.150);
+                    z-index: 100;
 
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         display: block;
                     }
 
@@ -158,13 +168,33 @@ body,
                         display: block;
                         padding: 5px;
 
-                        a {
-                            position: relative;
+                        &:hover {
+                            background-color: #eee;
                         }
+
+                        a {
+                            width: 100%;
+                            display: flex;
+                            position: relative;
+
+                            &:focus {
+                                outline: auto;
+                            }
+                        }
+
                     }
                 }
             }
         }
 
     }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .m-dnone {
+        display: none !important;
+    }
+
 }
