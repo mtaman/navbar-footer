@@ -13,6 +13,24 @@
 </head>
 
 <body>
+    <!-- offcanves -->
+
+    <div id="mySidenav" class="sidenav">
+
+        <div class="off-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <span id="of-close" class="material-symbols-outlined">
+                    close
+                </span>
+            </a>
+        </div>
+
+
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <!--/ offcanves -->
+
     <div class="page" id="page">
         <header class="header" id="header">
             <nav class="nav container-f" id="nav">
@@ -45,35 +63,80 @@
                     </div> <!--/ Center nav -->
 
 
-                    <div class="navbar-right">
-
-                        <button type="button" class="navbtn">Buy Now</button>
-
+                    <div class="navbar-right m-dnone">
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
                         <span class="material-symbols-outlined">
                             shopping_bag
                         </span>
-                        <span class="material-symbols-outlined">
-                            person
-                        </span>
-                        <span class="material-symbols-outlined">
+
+                        <button type="button" class="navbtn">Buy Now</button>
+
+                        <span onclick="openNav()" id="of-open" class="material-symbols-outlined">
                             menu
                         </span>
                     </div>
+                    <!-- /right nav -->
+                    <!-- mobil -->
+                    <div class="navbar-right mobilsid m-dblock">
+                        <span onclick="openNav()" class=" material-symbols-outlined">
+                            menu
+                        </span>
+                    </div>
+                    <!-- /mobil -->
 
                 </div> <!-- /.container -->
 
             </nav>
+
         </header>
 
     </div>
     <footer id="footer" class="footer container-f">
-        <div class="footer-contaier container w-aria"></div>
+        <div class="footer-contaier container-f w-aria">
+            <div class="container">
+                <div class="wi-box">
+                    <ul class="ul-wi-box">
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                    </ul>
+                </div>
+                <div class="wi-box">
+                    <ul class="ul-wi-box">
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                    </ul>
+                </div>
+                <div class="wi-box">
+                    <ul class="ul-wi-box">
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                    </ul>
+                </div>
+                <div class="wi-box">
+                    <ul class="ul-wi-box">
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                        <li class="f-item"><a href="#" class="f-vlink">item</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
         <div id="copyright" class="copyright container-f">
             <div class="copyright-contaier container copy-aria">
                 <p>copyRight</p>
             </div>
-
         </div>
+
         <script src="script.js"></script>
     </footer>
 </body>
